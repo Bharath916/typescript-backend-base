@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "cb255267-eaf4-4395-bf31-eec0ee1fb59f",
+		"name": "Insuredmine APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19937716"
+	},
+	"item": [
+		{
+			"name": "Task 1 and 2 APIs",
+			"item": [
+				{
+					"name": "addData",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agent\":\"Watson Alex\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/addData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"addData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agent\":\"Watson Alex\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/getAllData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"getAllData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneData/:id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/getOneData/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"getOneData",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65eda7b47b0f18361b217761"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateData/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agent\":\"Bharath Jain\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/updateData/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"updateData",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65eda7b47b0f18361b217761"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteData/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/deleteData/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"deleteData",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65eda7b47b0f18361b217761"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BulkUploadData",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1eedeb95-f86c-4d50-86a0-ef8ceca7a5e8"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/bulkUpload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"bulkUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchByUserName/:id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/searchByUserName/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"searchByUserName",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65eef9f55796955094d673fc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aggregateDataForEachUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/aggregateData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"aggregateData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMessageAlert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\":\"This is working!!!\",\r\n    \"day\":\"Tuesday\",\r\n    \"date\":\"10:52 AM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/addMessage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"addMessage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "http://localhost:9000/v1/add/:collectionName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"Watson Alex\",\r\n    \"DOB\":\"12/03/1990\",\r\n    \"address\":\"BTM\",\r\n    \"phone\":9090099090,\r\n    \"state\":\"Karnataka\",\r\n    \"zipCode\":577909,\r\n    \"email\":\"watson@gmail.com\",\r\n    \"gender\":\"Male\",\r\n    \"userType\":\"Active Client\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/addData/:collectionName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"addData",
+								":collectionName"
+							],
+							"variable": [
+								{
+									"key": "collectionName",
+									"value": "User"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/v1/add/:collectionName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"Alex Carey\",\r\n    \"DOB\":\"12/03/1999\",\r\n    \"address\":\"JP nagara\",\r\n    \"phone\":9090099090,\r\n    \"state\":\"Karnataka\",\r\n    \"zipCode\":577987,\r\n    \"email\":\"Alex@gmail.com\",\r\n    \"gender\":\"Male\",\r\n    \"userType\":\"Active Client\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/getAllData/:collectionName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"getAllData",
+								":collectionName"
+							],
+							"variable": [
+								{
+									"key": "collectionName",
+									"value": "User"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/v1/add/:collectionName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/getOneData/:collectionName/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"getOneData",
+								":collectionName",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "collectionName",
+									"value": "User"
+								},
+								{
+									"key": "id",
+									"value": "65ec80925fa9458dd6a12d17"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/v1/add/:collectionName",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/deleteData/:collectionName/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"deleteData",
+								":collectionName",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "collectionName",
+									"value": "User"
+								},
+								{
+									"key": "id",
+									"value": "65ec80925fa9458dd6a12d17"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/v1/add/:collectionName",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"first_name\": \"Alex Carey\",\r\n  \"DOB\": \"12/03/1999\",\r\n  \"address\": \"JP nagara\",\r\n  \"phone\": 9090099090,\r\n  \"state\": \"Karnataka\",\r\n  \"zipCode\": 577909,\r\n  \"email\": \"alex@gmail.com\",\r\n  \"gender\": \"Male\",\r\n  \"userType\": \"Active Client\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/updateData/:collectionName/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"updateData",
+								":collectionName",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "collectionName",
+									"value": "User"
+								},
+								{
+									"key": "id",
+									"value": "65ec80205fa9458dd6a12d15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
