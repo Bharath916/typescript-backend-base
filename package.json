@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "nodemon Backend/src/index.ts",
     "start": "node Backend/dist/index.js",
-    "build": "tsc -p Backend/tsconfig.json && npm install --prefix Frontend/the-venue-hub && npm run build --prefix Frontend/the-venue-hub",
-    "build:live": "nodemon --watch \"src/**\" --ext \"ts\" --exec \"ts-node\" Backend/src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:backend": "tsc -p Backend/tsconfig.json",
+    "build:frontend": "npm install --prefix Frontend/the-venue-hub && npm run build --prefix Frontend/the-venue-hub",
+    "build": "npm run build:backend && npm run build:frontend"
   },
   "keywords": [],
   "author": "",
