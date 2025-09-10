@@ -5,11 +5,9 @@
   "main": "index.ts",
   "scripts": {
     "dev": "nodemon Backend/src/index.ts",
-    "start": "nodemon Backend/src/index.ts",
-    "build": "npm install && npm install --prefix Frontend/the-venue-hub && npm run build --prefix Frontend/the-venue-hub",
-    "build-fr": "cd ..\\fr-service && npm run build && npm run generate",
-    "copy": "cd ..\\fr-service && XCOPY dist\\** ..\\bk-service\\public\\ /E/H/C/I/Y",
-    "build:live": "nodemon --watch \"src/**\" --ext \"ts\" --exec \"ts-node\" src/index.ts",
+    "start": "node Backend/dist/index.js",
+    "build": "tsc -p Backend/tsconfig.json && npm install --prefix Frontend/the-venue-hub && npm run build --prefix Frontend/the-venue-hub",
+    "build:live": "nodemon --watch \"src/**\" --ext \"ts\" --exec \"ts-node\" Backend/src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
