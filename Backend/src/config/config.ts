@@ -3,7 +3,8 @@ require("dotenv").config();
 export class config {
   serviceName = process.env.SERVICE || "CONVENTION_HALL";
   mongodbURI =
-    process.env.MONGO_DB_URI || "mongodb://localhost:27017/conventionHall";
+    process.env.MONGO_DB_URI ||
+    "mongodb+srv://bharath:%21%40%23Bharath790@cluster0.v9fdrlb.mongodb.net/conventionHall?retryWrites=true&w=majority";
   port = process.env.PORT || 9090;
   dynamicModels = new Array();
   availableCollection = {

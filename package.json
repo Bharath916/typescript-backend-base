@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "npm run build:live",
-    "build": "./node_modules/.bin/tsc -p .",
+    "dev": "nodemon Backend/src/index.ts",
+    "start": "nodemon Backend/src/index.ts",
+    "build": "npm install && npm install --prefix Frontend/the-venue-hub && npm run build --prefix Frontend/the-venue-hub",
     "build-fr": "cd ..\\fr-service && npm run build && npm run generate",
     "copy": "cd ..\\fr-service && XCOPY dist\\** ..\\bk-service\\public\\ /E/H/C/I/Y",
     "build:live": "nodemon --watch \"src/**\" --ext \"ts\" --exec \"ts-node\" src/index.ts",
@@ -31,5 +32,8 @@
     "ts-node": "^10.9.2",
     "uniqid": "^5.4.0",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1"
   }
 }

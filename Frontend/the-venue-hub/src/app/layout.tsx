@@ -109,8 +109,8 @@
 import "./globals.css";
 import { ReactNode, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import LoginForm from "./login/page";
-import RegisterForm from "./register/page";
+import LoginForm from "../component/login/page";
+import RegisterForm from "../component/register/page";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
